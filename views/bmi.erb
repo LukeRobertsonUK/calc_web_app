@@ -1,0 +1,26 @@
+<% if @result %>
+
+
+<p>your BMI is <%=@result.round(2) %></p>
+
+
+
+<% end %>
+
+
+
+
+
+<form action='/bmi' method='get'>
+
+
+  Weight: <input type='float' name='weight'>
+  kg<input type = 'radio' name="weight_unit" value='kg'>
+  Ibs<input type = 'radio' name="weight_unit" value='pounds'>
+  Height: <input type= 'float' name='height'>
+  cm<input type='radio' name="height_unit" value='cm'>
+  inches<input type='radio' name="height_unit" value='inches'>
+  <button>calculate!</button>
+</form>
+
+

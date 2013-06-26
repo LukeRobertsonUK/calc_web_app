@@ -1,0 +1,27 @@
+<% if @result %>
+
+
+<p>your monthly payment is <%=@result.round(2) %></p>
+
+
+
+<% end %>
+
+
+
+
+
+
+
+
+
+
+
+
+
+<form action='/mortgage' method='get'>
+  loan principal (£): <input type='text' name='principal'>
+  annual interest rate (%): <input type= 'text' name='interest'>
+  number of monthly payments: <input type= 'text' name='number'>
+  <button>calculate!</button>
+</form>

@@ -1,0 +1,25 @@
+<% if @price %>
+
+
+  <p>your trip will take <%=@time.round(1)%> hours.</p>
+  <p>your trip will cost £<%=@cost.round(2)%>.</p>
+
+
+
+
+
+<% end %>
+
+
+
+
+
+<form action='/journey_cost' method='get'>
+  distance (miles): <input type='text' name='distance'>
+  stated fuel economy (mpg): <input type= 'text' name='economy'>
+  driving speed (mph): <input type= 'text' name='speed'>
+  cost of fuel (£/gallon): <input type= 'text' name='price'>
+  <button>calculate!</button>
+</form>
+
+
