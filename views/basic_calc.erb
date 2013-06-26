@@ -1,15 +1,28 @@
-<% if @result %>
-<section>
-  <header><h1>Results<h1></header>
-  <p>
-    the result of <%=@first%> <%=@operator%> is <%= @result %>
-  </p>
-</section>
-<% end %>
 
+<div class= "input">
+<h2>Input:</h2>
 <form action='/basic_calc' method='get'>
-  first: <input type='number' name='first'>
-  operator: <input type='text' name='operator'>
-  second: <input type='number' name='second'>
-  <button>calculate!</button>
-</form>
+  <table class="inputs">
+    <tr>
+      <td>First Input:</td>
+      <td><input type='number' name='first'></td>
+    </tr>
+    <tr>
+      <td>Operator:</td>
+      <td><input type='text' name='operator'></td>
+    </tr>
+    <tr>
+      <td>Second Input:</td>
+      <td><input type='number' name='second'></td>
+    </tr>
+  </table>
+    <button>CalcIT!</button></li>
+  </form>
+</div>
+
+<% if @result %>
+<div class="results">
+  <h2>Output:</h2>
+  <p><%=@first%> <%=@operator%> <%=@second%> = <%= @result %></p>
+</div>
+<% end %>

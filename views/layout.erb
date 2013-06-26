@@ -3,24 +3,34 @@
   <head>
     <meta charset='utf-8'>
     <title>Calculator</title>
-    <link rel="stylesheet" href='/style.css'>
+    <link rel="stylesheet" href='CSS/normalize.css'>
+    <link rel="stylesheet" href='CSS/style.css'>
   </head>
 
   <body>
     <header>
-      <h1>My awesome calculator</h1>
+      <h1>Calc-IT</h1>
     </header>
+    <div class='page'>
+      <div class="cf">
 
-    <a href="/basic_calc">BASIC CALCULATOR</a>
-    <a href="/bmi">BMI CALULATOR</a>
-    <a href= "/mortgage">MORTGAGE CALCULATOR</a>
-    <a href= "/journey_cost">JOURNEY COST CALCULATOR</a>
+            <nav>
+            <ul class="navigation">
+              <li><a href="/basic_calc">Basic Sums</a></li>
+              <li><a href="/bmi">Body Mass Index</a></li>
+              <li><a href= "/mortgage">Mortgage Payments</a></li>
+              <li><a href= "/journey_cost">Journey Duration And Cost</a></li>
+              <li><a href ="/">Home</a></li>
+            </ul>
+          </nav>
 
-    <%=yield %>
+        <%=yield %>
+      </div>
+  </div>
 
-    <footer>
-      <p>Something else here in the footer</p>
-    </footer>
+  <footer>
+      <p>&copy Luke Robertson</p>
+  </footer>
   </body>
 
 </html>

@@ -1,25 +1,33 @@
-<% if @price %>
 
+<div class= "input">
+  <h2>Input:</h2>
+  <form action='/journey_cost' method='get'>
+    <table class="inputs">
+      <tr>
+          <td>Distance (miles):</td>
+          <td><input type='text' name='distance'></td>
+      </tr>
+      <tr>
+          <td>Stated Fuel Economy (mpg):</td>
+          <td><input type= 'text' name='economy'></td>
+      </tr>
+      <tr>
+        <td>Intended Speed (mph):</td>
+        <td><input type= 'text' name='speed'></td>
+      </tr>
+      <tr>
+        <td>Cost of Fuel (£/gallon):</td>
+        <td><input type= 'text' name='price'></td>
+      </tr>
+      </table>
+      <button>CalcIT!</button>
+    </form>
+  </div>
 
-  <p>your trip will take <%=@time.round(1)%> hours.</p>
-  <p>your trip will cost £<%=@cost.round(2)%>.</p>
-
-
-
-
-
+<% if @cost %>
+  <div class="results">
+    <h2>Output:</h2>
+      <p>Your trip will take <%=@time.round(1)%> hours</p>
+      <p>and will cost £<%=@cost.round(2)%>.</p>
+  </div>
 <% end %>
-
-
-
-
-
-<form action='/journey_cost' method='get'>
-  distance (miles): <input type='text' name='distance'>
-  stated fuel economy (mpg): <input type= 'text' name='economy'>
-  driving speed (mph): <input type= 'text' name='speed'>
-  cost of fuel (£/gallon): <input type= 'text' name='price'>
-  <button>calculate!</button>
-</form>
-
-

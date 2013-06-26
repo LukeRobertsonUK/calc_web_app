@@ -1,0 +1,100 @@
+body {
+ background: url("../images/background.jpg") no-repeat center center fixed;
+  background-size: cover;
+
+}
+
+header {
+  text-align: center;
+  padding: 20px;
+}
+
+h1 {
+  display: block;
+  margin: auto;
+  color: #FFFFFF;
+  font-size: 50px;
+}
+
+.page {
+  width: 940px;
+  margin: auto;
+  padding: 10px;
+  background: #FFFFFF;
+}
+
+.navigation {
+  text-align: center;
+  background: #000000;
+  padding: 0;
+}
+
+ul.navigation {
+  padding: 5px 0 5px 0;
+}
+
+
+.navigation li {
+  padding: 0 10px 0 10px;
+  color: white;
+  display: inline-block;
+  }
+
+.navigation li a {
+  text-decoration: none;
+  color: #FFFFFF;
+}
+
+footer {
+  text-align: center;
+  font-weight: bold;
+  color: #FFFFFF;
+}
+
+td {
+  width: 150px;
+  font-size: 70%;
+}
+
+tr  {
+  padding: 10px 0 10px 0;
+}
+
+form {
+  padding: 10px;
+}
+
+.inputs {
+  margin-bottom: 10px;
+}
+
+.input {
+  float: left;
+  width: 550px;
+  border: 2px solid black;
+  padding: 10px;
+}
+
+.results {
+  float: right;
+  width: 300px;
+  border: 2px solid black;
+  padding: 10px;
+}
+
+#welcome {
+  text-align: center;
+}
+
+/*************
+* CLEARFIX   *
+*************/
+.cf:before,
+.cf:after {
+    content: " "; /* 1 */
+    display: table; /* 2 */
+}
+
+.cf:after {
+    clear: both;
+}

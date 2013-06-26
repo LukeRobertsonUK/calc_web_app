@@ -1,26 +1,40 @@
-<% if @result %>
 
-
-<p>your BMI is <%=@result.round(2) %></p>
-
-
-
-<% end %>
-
-
-
-
-
-<form action='/bmi' method='get'>
-
-
-  Weight: <input type='float' name='weight'>
-  kg<input type = 'radio' name="weight_unit" value='kg'>
-  Ibs<input type = 'radio' name="weight_unit" value='pounds'>
-  Height: <input type= 'float' name='height'>
-  cm<input type='radio' name="height_unit" value='cm'>
-  inches<input type='radio' name="height_unit" value='inches'>
-  <button>calculate!</button>
+<div class= "input">
+  <h2>Input:</h2>
+  <form action='/bmi' method='get'>
+    <table class="inputs">
+      <tr>
+        <td>Weight:</td>
+        <td><input type='float' name='weight'></td>
+      </tr>
+      <tr>
+        <td>kg:</td>
+        <td><input type = 'radio' name="weight_unit" value='kg'></td>
+      </tr>
+      <tr>
+          <td>Ibs</td>
+          <td><input type = 'radio' name="weight_unit" value='pounds'></td>
+      </tr>
+      <tr>
+          <td>Height:</td>
+          <td><input type= 'float' name='height'></td>
+      </tr>
+      <tr>
+          <td>cm</td>
+          <td><input type='radio' name="height_unit" value='cm'></td>
+       </tr>
+       <tr>
+          <td>inches</td>
+          <td><input type='radio' name="height_unit" value='inches'></td>
+      </tr>
+</table>
+<button>CalcIT!</button>
 </form>
+</div>
 
-
+<% if @result %>
+<div class="results">
+  <h2>Output:</h2>
+    <p>Your BMI is <%=@result.round(2) %></p>
+</div>
+<% end %>

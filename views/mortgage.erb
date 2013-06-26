@@ -1,27 +1,30 @@
+
+<div class= "input">
+  <h2>Input:</h2>
+  <form action='/mortgage' method='get'>
+    <table class="inputs">
+      <tr>
+        <td>Loan Principal (£):</td>
+        <td><input type='text' name='principal'></td>
+      </tr>
+      <tr>
+        <td>Interest Rate (p.a.) (%):</td>
+        <td><input type= 'text' name='interest'></td>
+       </tr>
+       <tr>
+        <td>No. Monthly Payments:</td>
+        <td> <input type= 'text' name='number'></td>
+      </tr>
+    </table>
+    <button>CalcIT!</button>
+  </form>
+</div>
+
 <% if @result %>
-
-
-<p>your monthly payment is <%=@result.round(2) %></p>
-
-
-
+<div class = "results">
+  <h2>Output:</h2>
+  <p>Your monthly payment is £<%=@result.round(2) %></p>
+</div>
 <% end %>
 
 
-
-
-
-
-
-
-
-
-
-
-
-<form action='/mortgage' method='get'>
-  loan principal (£): <input type='text' name='principal'>
-  annual interest rate (%): <input type= 'text' name='interest'>
-  number of monthly payments: <input type= 'text' name='number'>
-  <button>calculate!</button>
-</form>
