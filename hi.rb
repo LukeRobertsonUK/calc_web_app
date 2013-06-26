@@ -16,6 +16,15 @@ get '/name/:first' do
 end
 
 get '/name/:first/:last/:age' do
-  binding.pry
   "your name is #{params[:first]} #{params[:last]}. you are #{params[:age]} years old."
+end
+
+get '/multiply/:x/:y' do
+  result = params[:x].to_f * params[:y].to_f
+  "The result is #{result}"
+end
+
+get '/divide/:x/:y' do
+  result = params[:x].to_f / params[:y].to_f
+  "The result is #{result}"
 end
