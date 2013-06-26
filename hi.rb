@@ -14,3 +14,8 @@ end
 get '/name/:first' do
   "Hello, #{params[:first]}"
 end
+
+get '/name/:first/:last/:age' do
+  binding.pry
+  "your name is #{params[:first]} #{params[:last]}. you are #{params[:age]} years old."
+end
