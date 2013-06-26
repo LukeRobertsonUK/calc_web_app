@@ -20,11 +20,11 @@ get '/name/:first/:last/:age' do
 end
 
 get '/multiply/:x/:y' do
-  result = params[:x].to_f * params[:y].to_f
-  "The result is #{result}"
+  @result = params[:x].to_f * params[:y].to_f
+  erb :calc
 end
 
 get '/divide/:x/:y' do
-  result = params[:x].to_f / params[:y].to_f
-  "The result is #{result}"
+  @result = params[:x].to_f / params[:y].to_f
+  erb :calc
 end
