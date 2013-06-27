@@ -6,27 +6,25 @@
       <tr>
         <td>Weight:</td>
         <td><input type='float' name='weight'></td>
-      </tr>
-      <tr>
-        <td>kg:</td>
-        <td><input type = 'radio' name="weight_unit" value='kg'></td>
-      </tr>
-      <tr>
-          <td>Ibs</td>
-          <td><input type = 'radio' name="weight_unit" value='pounds'></td>
+        <td>Units:</td>
+        <td>
+            <select name='weight_unit'>
+                <option value = 'kg'>kg</option>
+                <option value= 'pounds'>Ibs</option>
+            </select>
+          </td>
       </tr>
       <tr>
           <td>Height:</td>
           <td><input type= 'float' name='height'></td>
-      </tr>
-      <tr>
-          <td>cm</td>
-          <td><input type='radio' name="height_unit" value='cm'></td>
+          <td>Units:</td>
+          <td>
+              <select name='height_unit'>
+                  <option value='cm'>cm</option>
+                  <option value='inches'>inches</option>
+              </select>
+          </td>
        </tr>
-       <tr>
-          <td>inches</td>
-          <td><input type='radio' name="height_unit" value='inches'></td>
-      </tr>
 </table>
 <button>CalcIT!</button>
 </form>
